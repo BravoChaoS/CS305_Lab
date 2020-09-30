@@ -2,7 +2,15 @@ import asyncio
 
 
 async def echo(reader, writer):
-    pass
+    while True:
+        data = await reader.readline()
+        message = data.decode().split(' ')
+        writer.write(data)
+        print(data)
+        if data == b'exit\r\n':
+            break
+    await writer.drain()
+    writer.close()
 
 
 if __name__ == '__main__':
