@@ -2,14 +2,7 @@ import asyncio
 
 
 async def echo(reader, writer):
-        while True:
-            data = conn.recv(2048)
-            if data and data != b'exit':
-                conn.send(data)
-                print(data)
-            else:
-                conn.close()
-                break
+    pass
 
 
 if __name__ == '__main__':
