@@ -4,6 +4,7 @@
 import unittest
 import narcissistic_number as narci
 
+
 class TestNarcissisticNumber(unittest.TestCase):
 
     def test_case_1(self):
